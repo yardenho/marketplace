@@ -1,11 +1,11 @@
-const Marketplace = artifacts.require("./Marketplace.sol");  // maybe need to change to "Marketplace"
+const Marketplace = artifacts.require("./Marketplace.sol"); // maybe need to change to "Marketplace"
 
 require("chai")
     .use(require("chai-as-promised"))
     .should();
 
 contract("Marketplace", ([deployer, seller, buyer]) => {
-    let marketplace;    
+    let marketplace;
 
     before(async () => {
         marketplace = await Marketplace.deployed();
@@ -152,6 +152,5 @@ contract("Marketplace", ([deployer, seller, buyer]) => {
         });
     });
 });
-
 
 // smart contracts works with Wei.
